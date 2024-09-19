@@ -144,9 +144,6 @@ let numbers = [3, 227, 2, 110, 26];
 let numbersbig = 0;
 for(x = 0; x<=numbers.length-1;x++)
 {
-  console.log(numbers[x]);
-  
-
   if( numbers[x]>numbersbig )
   {
     numbersbig = numbers[x];
@@ -155,8 +152,8 @@ for(x = 0; x<=numbers.length-1;x++)
   {
     numbersbig = numbers[x];
   }
-  console.log(numbersbig);
 }
+console.log(numbersbig);
 console.log('<----------------->');
 console.log(`Harflarni sanash: Matnda nechta "a" harfi borligini sanaydigan dastur yozing.`);
 let atakror = "assalamu alaykum";
