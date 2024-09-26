@@ -175,16 +175,12 @@
 // }
 // console.log(sonlar);
 
-
-
 // let matin = "farhod";
 // let teskariMatin = "";
 // for (let x = matin.length - 1; x >= 0; x--) {
 //   teskariMatin += matin[x];
 // }
 // console.log(teskariMatin);
-
-
 
 // const vazifa1 = function (s) {
 //   javob = [];
@@ -204,15 +200,7 @@
 
 // console.log(vazifa1(30));
 
-
-
-
-
-
-
-
-
-//// 1------------------------------------------
+// // 1------------------------------------------
 
 // const quastion1 = function (x){
 //   let y = 0;
@@ -226,17 +214,17 @@
 //   return z;
 // }
 
-// const questVal = [1, 2, 3, 4, 5, 6, 7];
-// console.log(quastion1(questVal));
+// const questVal1 = [1, 2, 3, 4, 5, 6, 7];
+// console.log(quastion1(questVal1));
 
-//// 2------------------------------------------
+// // 2------------------------------------------
 
 // const quastion2 = x =>  x = x.toString();
 
 // const questVal2 = 123;
 // console.log(typeof quastion2(questVal2), quastion2(questVal2));
 
-//// 3------------------------------------------
+// // 3------------------------------------------
 
 // const quastion3 = (x) => x>0 ? x= x*-1 : x;
 
@@ -266,7 +254,7 @@
 // x =10;
 // console.log(x*-1);
 
-//// 7------------------------------------------
+// // 7------------------------------------------
 
 // const quastion7 = function (x) {
 //   let y = 0;
@@ -277,79 +265,142 @@
 // const questVal7 = [1, 2,true, -3,true, 4, 5,true, -6, -7];
 // console.log(quastion7(questVal7));
 
-// 8------------------------------------------
+// // 8------------------------------------------
 
-const quastion8 = function (x) {
+// const quastion8 = function (x) {
+//   let y = x[0];
+//   let z = x[0]
+//   for (let value of x) {
+//     y < value ? (y = value) : "";
+//     z > value ? (z = value) : "";
+//   }
+//   return (y+','+ z);
+// };
+
+// const questVal8 = [2,5,9,4,11];
+// console.log(quastion8(questVal8));
+
+// // 9------------------------------------------
+
+// const quastion9 = function (x) {
+//   if(x === true)
+//   {
+//     return 'yes'
+//   }
+//   else if (x === false) {
+//     return "no";
+//   }
+//   else
+//   {
+//     return 'error'
+//   }
+
+// };
+
+// const questVal9 = false;
+// console.log(quastion9(questVal9));
+
+// // 10------------------------------------------
+
+// const quastion10 = (x) => x.toUpperCase();
+
+// const questVal10 = "salom";
+// console.log(quastion10(questVal10));
+
+// // 11------------------------------------------
+
+// const quastion11 = (x) => {
+//   z = 0;
+//   for(let y = 1; y <= x; y++)  z+=y;
+//   return z
+// }
+
+// const questVal11 = 5;
+// console.log(quastion11(questVal11));
+
+// // 11------------------------------------------
+
+// const quastion12 = (x) => {
+//   z=''
+//   for(let y = x.length -1 ; y >= 0; y--)  z+=x[y];
+//   return z
+// }
+
+// const questVal12 = 'qwerty ';
+// console.log(quastion12(questVal12));
+
+
+const getAvarage = x => x.reduce((acc, num) => acc + num,0)/ x.length
+
+console.log(getAvarage([1,2,3,8]));
+
+
+
+const invert = x => {
+  let z=[]
+  for(let y in x) x[y] === 0 ? z.push(x[y]) : z.push(-x[y]);
+  return z
+}
+
+let a =[-1,2,-3,0,-5];
+
+console.log(invert(a));
+
+// 1 vazifa
+
+const getBonus = (x, y) => (y === true ? x * 10 : x);
+
+console.log(getBonus(1200, false));
+
+// 1 vazifa
+// 2 vazifa
+
+const solution = (x) => {
+  let z = "";
+  for (y = x.length - 1; y >= 0; y--) z += x[y];
+
+  return z;
+};
+
+console.log(solution("word"));
+
+// 2 vazifa
+// 3 vazifa
+
+const enough = (x) => {
   let y = x[0];
-  let z = x[0]
-  for (let value of x) {
-    y < value ? (y = value) : "";
-    z > value ? (z = value) : "";
-  } 
-  return (y+','+ z);
+  for (z = 1; z < x.length; z++) {
+    if (y > x[z]) y = y - x[z];
+    else y = x[z] - y;
+  }
+  return y;
 };
 
-const questVal8 = [2,5,9,4,11];
-console.log(quastion8(questVal8));
+console.log(enough([10, 5, 5, 10, 7, 6, 3, -4]));
 
-// 9------------------------------------------
+// 3 vazifa
+// 4 vazifa
 
-const quastion9 = function (x) {
-  if(x === true)
-  {
-    return 'yes'
-  }
-  else if (x === false) {
-    return "no";
-  }
-  else
-  {
-    return 'error'
-  }
+const formatMoney = (x) => (x = "$" + x.toFixed(2));
 
+console.log(formatMoney(3));
+
+// 4 vazifa
+// 5 vazifa
+
+const position = (y) => {
+  const x = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+  ];
+    return x.indexOf(y.toLowerCase()) + 1;
+
+  //  for (let z in x)
+  //  {
+  //   if(x[z]==y)
+  //   {
+  //     return z*1+1
+  //   }
+      // }
 };
 
-const questVal9 = false;
-console.log(quastion9(questVal9));
-
-// 10------------------------------------------
-
-const quastion10 = (x) => x.toUpperCase();
-
-const questVal10 = "salom";
-console.log(quastion10(questVal10));
-
-// 11------------------------------------------
-
-const quastion11 = (x) => {
-  z = 0;
-  for(let y = 1; y <= x; y++)  z+=y;
-  return z
-}
-
-const questVal11 = 5;
-console.log(quastion11(questVal11));
-
-// 11------------------------------------------
-
-const quastion12 = (x) => {
-  z=''
-  for(let y = x.length -1 ; y >= 0; y--)  z+=x[y];
-  return z
-}
-
-const questVal12 = 'qwerty ';
-console.log(quastion12(questVal12));
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(position("f"));
 
